@@ -1,6 +1,6 @@
 {
   "name": "@oneweek.lee/secure-random",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "npm workshop",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",
