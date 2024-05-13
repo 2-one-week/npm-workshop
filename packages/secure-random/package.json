@@ -21,6 +21,17 @@
       "require": "./dist/server.cjs"
     }
   },
+  "keywords": [
+    "naver",
+    "naver financial",
+    "naver pay",
+    "common fe",
+    "secure random",
+    "random"
+  ],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "clean": "rm -rf ./dist",
     "build:pkg": "pnpm clean && vite build",
