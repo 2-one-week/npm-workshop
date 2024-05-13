@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [dts({ insertTypesEntry: true })],
   build: {
     lib: {
-      name: "@2-one-week/secure-random",
+      name: "@oneweek.lee/secure-random",
       entry: {
         index: "./src/index.ts",
         client: "./src/client.ts",
