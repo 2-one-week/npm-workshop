@@ -20,16 +20,16 @@ export function insecureRandom(params?: RandomParams) {
   return Math.random() * (max - min) + min;
 }
 
-export async function secureRandom(params?: RandomParams) {
+export function secureRandom(params?: RandomParams) {
   const { min = 0, max = 1 } = params || {};
 
   validateRandomParams({ min, max });
 
-  const randomValue = await (async () => {
+  const randomValue = (() => {
     try {
       const randomArray = new Uint32Array(1);
       if (typeof window === "undefined") {
-        const crypto = await import("node:crypto");
+        const crypto = require("node:crypto");
         crypto.getRandomValues(randomArray);
         return 1 / randomArray[0];
       } else {
