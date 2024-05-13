@@ -27,7 +27,13 @@ importers:
         specifier: ^5.2.2
         version: 5.4.5
 
-  packages/secure-random: {}
+  packages/secure-dice: {}
+
+  packages/secure-random:
+    devDependencies:
+      '@types/node':
+        specifier: ^20.12.11
+        version: 20.12.11
 
   services/CJS-nodejs:
     devDependencies:
