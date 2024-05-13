@@ -5,6 +5,10 @@ import { validateRandomParams } from "./validate";
 export function secureRandom(params?: RandomParams) {
   const { min = 0, max = 1 } = params || {};
 
+  if (typeof window !== "undefined") {
+    throw new Error("server side에서 실행시켜주세요.");
+  }
+
   validateRandomParams({ min, max });
 
   const randomValue = (() => {

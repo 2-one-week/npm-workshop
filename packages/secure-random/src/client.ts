@@ -1,8 +1,12 @@
 import { RandomParams } from "./types";
 import { validateRandomParams } from "./validate";
 
-export function secureRandom(params?: RandomParams) {
+export function secureRandomWhenClientSide(params?: RandomParams) {
   const { min = 0, max = 1 } = params || {};
+
+  if (typeof window === "undefined") {
+    throw new Error("client side에서 실행시켜주세요.");
+  }
 
   validateRandomParams({ min, max });
 
