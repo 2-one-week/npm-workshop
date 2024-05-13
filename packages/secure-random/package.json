@@ -1,5 +1,5 @@
 {
-  "name": "@2-one-week/secure-random",
+  "name": "@oneweek.lee/secure-random",
   "version": "0.0.1",
   "description": "npm workshop",
   "main": "./dist/cjs/index.js",
