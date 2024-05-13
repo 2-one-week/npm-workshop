@@ -1,11 +1,53 @@
 {
-  "name": "@2-one-week/secure-dice",
+  "name": "@oneweek.lee/secure-dice",
   "version": "0.0.1",
   "description": "npm workshop",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "keywords": [
+    "naver",
+    "naver financial",
+    "naver pay",
+    "common fe",
+    "secure dice",
+    "random"
+  ],
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf ./dist",
+    "build:pkg": "pnpm clean && vite build",
+    "test": "jest",
+    "deploy:pkg": "pnpm publish --access=public"
   },
   "author": "2-one-week <oneweek.lee@navercorp.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "peerDependencies": {
+    "@oneweek.lee/secure-random": "workspace:*",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.12.11",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@vitejs/plugin-react": "^4.2.1",
+    "classnames": "^2.5.1",
+    "jest": "^29.7.0",
+    "rollup-plugin-preserve-directives": "^0.4.0",
+    "sass": "^1.77.1",
+    "ts-jest": "^29.1.2",
+    "vite": "^5.2.11",
+    "vite-plugin-dts": "^3.9.1"
+  }
 }
