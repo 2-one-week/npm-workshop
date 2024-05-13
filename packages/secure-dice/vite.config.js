@@ -12,7 +12,6 @@ export default defineConfig({
       entry: {
         index: "./src/index.ts",
       },
-
       formats: ["cjs", "es"],
     },
     ssr: true,
