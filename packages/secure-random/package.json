@@ -4,7 +4,7 @@
   "description": "npm workshop",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:pkg": "tsc -p tsconfig.json"
   },
   "author": "2-one-week <oneweek.lee@navercorp.com>",
   "license": "ISC",
