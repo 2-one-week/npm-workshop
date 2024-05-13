@@ -2,13 +2,24 @@
   "name": "@2-one-week/secure-random",
   "version": "0.0.1",
   "description": "npm workshop",
-  "main": "index.js",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.mjs",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/secure-random.js",
+      "require": "./dist/secure-random.mjs"
+    }
+  },
   "scripts": {
-    "build:pkg": "tsc -p tsconfig.json"
+    "build:pkg": "pnpm clean && vite build",
+    "clean": "rm -rf ./dist"
   },
   "author": "2-one-week <oneweek.lee@navercorp.com>",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.12.11"
+    "@types/node": "^20.12.11",
+    "vite": "^5.2.11",
+    "vite-plugin-dts": "^3.9.1"
   }
 }
