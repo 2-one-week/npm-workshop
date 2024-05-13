@@ -8,7 +8,7 @@
     "prettier": { "cache": false },
     "prettier:fix": { "cache": false },
     "test": { "cache": false },
-    "publish": { "cache": false, "outputs": ["dist/**"] },
+    "deploy:pkg": { "cache": false, "outputs": ["dist/**"] },
     "clean": { "cache": false }
   }
 }
