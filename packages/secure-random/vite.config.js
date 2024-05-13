@@ -13,5 +13,10 @@ export default defineConfig({
       },
       formats: ["cjs", "es"],
     },
+    rollupOptions: {
+      output: {
+        preserveModules: true,
+      },
+    },
   },
 });
