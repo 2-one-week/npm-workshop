@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "turbo run build",
+    "build:pkg": "turbo run build:pkg",
     "test": "turbo run test",
     "lint": "eslint '**/*.{js,jsx,ts,tsx}'",
     "lint:fix": "pnpm run lint --fix",
