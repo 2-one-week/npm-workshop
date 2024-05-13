@@ -2,7 +2,7 @@ import crypto from "node:crypto";
 import { RandomParams } from "./types";
 import { validateRandomParams } from "./validate";
 
-export function secureRandom(params?: RandomParams) {
+export function secureRandomWhenServerSide(params?: RandomParams) {
   const { min = 0, max = 1 } = params || {};
 
   if (typeof window !== "undefined") {
