@@ -6,7 +6,11 @@ export default defineConfig({
   build: {
     lib: {
       name: "@2-one-week/secure-random",
-      entry: "./src/index.ts",
+      entry: {
+        index: "./src/index.ts",
+        client: "./src/client.ts",
+        server: "./src/server.ts",
+      },
       formats: ["cjs", "es"],
     },
   },
