@@ -25,7 +25,7 @@
     "clean": "rm -rf ./dist",
     "build:pkg": "pnpm clean && vite build",
     "test": "jest",
-    "publish": "pnpm publish"
+    "publish:pkg": "pnpm publish"
   },
   "author": "2-one-week <oneweek.lee@navercorp.com>",
   "license": "ISC",
