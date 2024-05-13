@@ -1,9 +1,9 @@
 {
   "name": "@oneweek.lee/secure-random",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "npm workshop",
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.mjs",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
